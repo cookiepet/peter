@@ -1,10 +1,14 @@
 # Inport exercise
 import random
+start_num = input('Please input start number:') 
+end_num = input('Please input end number:')
+start_num = int(start_num)
+end_num = int(end_num)
 
-r = random.randint(1, 100)
+r = random.randint(start_num, end_num)
 
-up_limit = 100
-low_limit = 1
+up_limit = end_num
+low_limit = start_num
 count = 0
 
 while True:

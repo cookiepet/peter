@@ -27,3 +27,11 @@ for d in data:
 		new.append(d)
 
 print('Total have', len(new), 'data length below 100.')
+
+# Filter if data contain 'Good' word.
+good = []
+for d in data:
+	if 'good' in d:
+		good.append(d)
+
+print('Total have', len(good), 'data with "good".')

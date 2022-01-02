@@ -13,8 +13,17 @@ with open('reviews.txt', 'r') as f:
 
 print('File read complete, total have', len(data), 'datas')
 
+# Calculate average data length
 length = 0
 for d in data:
 	length = length + len(d) # length += len(d)
 	
 print('Average length of each is', length/len(data))
+
+# Filter if data length < 100
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+
+print('Total have', len(new), 'data length below 100.')

@@ -35,3 +35,16 @@ for d in data:
 		good.append(d)
 
 print('Total have', len(good), 'data with "good".')
+
+# Quick method (list comprehension)
+# good = [d for d in data if 'good' in d]
+# Output = [[number-1] for number in reference if condition]
+# output: Result array
+# [number-1]: Target object to be putted into array
+# number: Filter target.
+# reference: Target array which need to be screened
+
+bad = ['bad' in d for d in data]
+print(bad)
+
+# 'Bad' in d true and false result will be added into bad array

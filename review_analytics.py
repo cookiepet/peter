@@ -13,6 +13,38 @@ with open('reviews.txt', 'r') as f:
 
 print('File read complete, total have', len(data), 'datas')
 
+print(data[0])
+
+# Word count function.
+
+wc = {} # word_count
+# Nested for loop
+for d in data:
+	words = d.split()
+	for word in words:
+		if word in wc:
+			wc[word] += 1
+		else:
+			wc[word] = 1 # Add new key in dictionary.
+
+for word in wc:
+	if wc[word] > 1000000:
+		print(word, wc[word])
+
+print(len(wc))
+print(wc['Allen'])
+
+while True:
+	word = input('Please input the word you want to search:')
+	if word == 'q':
+		break
+	if word in wc:
+		print('Total have', word, ':', wc[word])
+	else:
+		print('The', word, 'is not included in dictionary.')
+
+print('Thank you.')
+
 # Calculate average data length
 length = 0
 for d in data:
